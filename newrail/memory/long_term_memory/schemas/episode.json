@@ -1,0 +1,21 @@
+{
+    "class": "Episode",
+    "description": "Episode",
+    "properties": [
+        {
+            "name": "topic",
+            "dataType": ["text"],
+            "description": "The topic of the episode",
+        },
+        {
+            "name": "meta_episode",
+            "dataType": ["Episode"],
+            "description": "The episode which generalizes this episode",
+        },
+        {
+            "name": "content",
+            "dataType": ["text"],
+            "description": "Content of the information",
+        }
+    ]
+}

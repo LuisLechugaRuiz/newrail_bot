@@ -1,0 +1,21 @@
+{
+    "class": "Plugin",
+    "description": "Action plugin.",
+    "properties": [
+        {
+            "name": "description",
+            "dataType": ["text"],
+            "description": "The description of the functionalities of the plugin"
+        },
+        {
+            "name": "instructions",
+            "dataType": ["text"],
+            "description": "Instructions for the user on how to use the plugin"
+        },
+        {
+            "name": "action",
+            "dataType": ["Action"],
+            "description": "An action that can be performed by the plugin"
+        }
+    ]
+}

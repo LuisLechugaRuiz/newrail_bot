@@ -1,0 +1,16 @@
+{
+    "class": "Action",
+    "description": "An action.",
+    "properties": [
+        {
+            "name": "name",
+            "dataType": ["text"],
+            "description": "The name of the action"
+        },
+        {
+            "name": "episodes",
+            "dataType": ["Episode"],
+            "description": "The episodes were the action was performed"
+        }
+    ]
+}

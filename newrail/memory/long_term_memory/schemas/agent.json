@@ -1,0 +1,16 @@
+{
+    "class": "Agent",
+    "description": "Agent",
+    "properties": [
+        {
+            "name": "name",
+            "dataType": ["text"],
+            "description": "The agent name"
+        },
+        {
+            "name": "episode",
+            "dataType": ["Episode"],
+            "description": "The episodes that the agent added to the memory"
+        }
+    ],
+}

@@ -1,0 +1,40 @@
+teams:
+- documentation_team:
+    mission: Write the documentation for the project.
+    capabilities:
+    - web_navigator
+    agents:
+    - documentation_template_agent:
+        mission: Manage a template for all the documentation and review the documentations from other members and ensure the template is followed.
+        capabilities:
+        - edit_file
+    - documentation_synthesis_agent:
+        mission: Document the work done by the research and code teams.
+        capabilities:
+        - edit_file
+- research_team:
+    mission: Research using web search capability.
+    capabilities:
+    - web_navigator
+    agents:
+    - research_template_agent:
+        mission: Create and maintain a research framework using multiple templates
+        capabilities:
+        - edit_file
+    - research_analysis_agent:
+        mission: Conduct research and analysis of the existing literature, searching in the web and updating the documentation using the research framework. 
+        capabilities:
+        - web_navigator
+- code_team:
+    mission: Implement the research developed by the research team and provide tests for the code.
+    capabilities:
+    - programmer
+    agents:
+    - code_template_agent:
+        mission: Develop and maintain a coding standard and best practices for the team and review and ensure code quality and adherence to the standard by team members.
+        capabilities:
+        - programmer
+    - code_implementation_agent:
+        mission: Implement the requested features and fix bugs in the code.
+        capabilities:
+        - programmer

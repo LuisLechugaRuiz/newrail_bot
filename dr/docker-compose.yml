@@ -1,0 +1,40 @@
+version: '3.4'
+services:
+  newrail:
+    container_name: newrail
+    build:
+      context: ..
+      dockerfile: dr/Dockerfile
+    working_dir: /app
+    volumes:
+      - ../newrail:/app/newrail
+      - ../permanent_storage:/app/permanent_storage
+      - ../scripts:/app/scripts
+      - ../dr/pyproject.toml:/app/pyproject.toml
+      - ./bashrc:/root/.bashrc:ro
+      - ./bashrc:/etc/skel/.bashrc:ro
+      - ./bashrc:/home/.bashrc:ro
+      - /var/run/docker.sock:/var/run/docker.sock # CONSIDER THIS DEPENDING ON PROGRAMMER DOCKER.
+      - ..:/app
+    hostname: newrail
+    stdin_open: true
+    depends_on:
+      - weaviate
+    links:
+      - weaviate
+    env_file:
+      - .env
+  weaviate:
+    image: semitechnologies/weaviate:1.18.3
+    ports:
+    - 9090:8080
+    restart: on-failure:0
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      ENABLE_MODULES: 'ref2vec-centroid'
+      DEFAULT_VECTORIZER_MODULE: 'none'
+      CLUSTER_HOSTNAME: 'node1'
+    volumes:
+      - /var/weaviate:/var/lib/weaviate

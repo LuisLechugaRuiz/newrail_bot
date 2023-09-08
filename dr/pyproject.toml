@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "newrail"
+version = "0.1.0"
+description = "An autonomous system which runs a full organization."
+authors = ["Luis Lechuga Ruiz"]
+readme = "README.md"
+packages = [{include = "newrail"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+beautifulsoup4 = "^4.12.2"
+colorama = "^0.4.6"
+openai = "^0.27.4"
+python-dotenv = "^1.0.0"
+pyyaml = "^6.0"
+requests = "^2.28.2"
+tiktoken = "^0.3.3"
+gtts = "^2.3.1"
+docker = "^6.0.1"
+google-api-python-client = "^2.84.0"
+orjson = "^3.8.9"
+scikit-learn = "^1.2.2"
+weaviate-client = "^3.15.5"
+asyncio = "^3.4.3"
+toml = "^0.10.2"
+spacy = "^3.5.2"
+pexpect = "^4.8.0"
+unidecode = "^1.3.6"
+flask = "^2.3.2"
+jsonschema = "^4.17.3"
+playwright = "^1.33.0"
+supabase = "^1.0.3"
+black = "^23.3.0"
+pillow = "^9.5.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

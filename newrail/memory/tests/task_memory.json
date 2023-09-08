@@ -1,0 +1,50 @@
+{
+  "root": {
+    "name": "root",
+    "children": [
+      {
+        "name": "goal1",
+        "children": [
+          {
+            "name": "goal1_1",
+            "children": [],
+            "operations": [],
+            "episode": {
+              "content": "",
+              "topic": ""
+            }
+          },
+          {
+            "name": "goal1_2",
+            "children": [],
+            "operations": [],
+            "episode": {
+              "content": "",
+              "topic": ""
+            }
+          }
+        ],
+        "operations": [],
+        "episode": {
+          "content": "",
+          "topic": ""
+        }
+      },
+      {
+        "name": "goal2",
+        "children": [],
+        "operations": [],
+        "episode": {
+          "content": "",
+          "topic": ""
+        }
+      }
+    ],
+    "operations": [],
+    "episode": {
+      "content": "",
+      "topic": ""
+    }
+  },
+  "current_goal": "goal1"
+}

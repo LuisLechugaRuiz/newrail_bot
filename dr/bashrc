@@ -1,0 +1,9 @@
+# Set the desired prompt in the container shell
+PS1="\[\033[38;5;208m\]\u@\h:\[\033[38;5;111m\]\w\[\033[0m\] \\$ "
+
+# Colorize ls command
+alias ls='ls --color=auto'
+alias l='ls'
+
+# Set color for directory listings
+LS_COLORS='di=38;5;33:ln=38;5;208:so=38;5;208:pi=38;5;208:ex=38;5;208:bd=38;5;33:cd=38;5;33:su=38;5;208:sg=38;5;208:tw=38;5;208:ow=38;5;208'
